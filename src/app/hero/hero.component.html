@@ -4,10 +4,6 @@
  </ul>
 
 
-<div *ngIf="selectedHero">
-    The selected hero is {{selectedHero.name}} {{selectedHero.age}}
-</div>
-
-2 way binding
-<input [(ngModel)]="temp" />
-{{temp}}
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<br />
+2 way binding <input [(ngModel)]="temp" /> {{temp}}
