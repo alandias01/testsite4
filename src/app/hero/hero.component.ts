@@ -11,15 +11,23 @@ export class HeroComponent implements OnInit {
   selectedHero: Hero;
 
   temp: string;
+
+  returnName: string;
+
   heroes: Hero[];
 
   getHero(hero: Hero) {
       this.selectedHero = hero;
   }
 
-  constructor(private heroService: HeroService) {      
+
+  constructor(private heroService: HeroService) {
   }
 
+  onNotify(val: string) {
+    this.returnName=val;
+  }
+  
   ngOnInit() {
     this.heroes = this.heroService.getHeros();
   }

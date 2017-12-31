@@ -4,6 +4,7 @@
  </ul>
 
 
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<app-hero-detail [hero]="selectedHero"  (notify)="onNotify($event)"></app-hero-detail>
 <br />
+<div>Return value from detail: {{returnName}}</div>
 2 way binding <input [(ngModel)]="temp" /> {{temp}}
