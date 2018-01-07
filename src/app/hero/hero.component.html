@@ -8,3 +8,9 @@
 <br />
 <div>Return value from detail: {{returnName}}</div>
 2 way binding <input [(ngModel)]="temp" /> {{temp}}
+
+<ul *ngFor="let hero of heroes">
+    <li>
+        <a [routerLink]="['/heroes', hero.id]"> {{ hero.name }} </a>
+    </li>
+</ul>

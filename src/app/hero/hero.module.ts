@@ -3,18 +3,22 @@ import { HeroComponent } from './hero.component';
 import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
 import { HeroService } from '../hero.service';
 import { SharedModule } from '../shared/shared.module';
+import { RouterModule } from '@angular/router';
+import { HeroDetailSingleComponent } from '../hero-detail/hero-detail-single.component';
 
 @NgModule({
   imports: [    
-    SharedModule
+    SharedModule,
+    RouterModule.forChild([
+      {path:'heroes', component: HeroComponent},
+    {path:'heroes/:id', component: HeroDetailSingleComponent}])
   ],
   exports:[
-    HeroComponent,
-    HeroDetailComponent
-  ],
+      ],
   declarations: [    
     HeroComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    HeroDetailSingleComponent
   ],
   providers:[HeroService]
 })

@@ -12,6 +12,10 @@ export class HeroService {
     getHeros():Hero[] {
         return this.heroes;
     }
+
+    getHero(id:number):Hero {
+        return this.heroes.find(x=>x.id==id);
+    }
   constructor() { }
 
 }
