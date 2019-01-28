@@ -1,0 +1,27 @@
+ng new projectname --skip-install --dry-run --prefix myprefix --routing
+ng serve -o
+	--host 0.0.0.0 --port 4201
+ng g c hero --flat (if folder is already created)
+ng g s hero -m app.module
+ng g m mymodule -m app.module (or if shared module -m product/product.module)
+ng g class myclass
+
+declarations
+imports
+exports
+providers
+bootstrap
+
+You declare components, directives, and pipes inside the module you are using it in
+If you wish to share the components inside this module with another module, you must export them
+
+you import modules so you can use the components inside that module
+You dont have to declare the components of that module, but they have to be in the exports
+of the module they are contained in
+
+If you have a module like commonModule and formsModule that are commonly used in many modules, 
+you can contain them in a shared module.  You just put them in the exports.  You don't have to put 
+them in imports unless you are going to use them inside the shared module.
+
+If you have a component you want to share, you can create it in the shared module, then put it in 
+declarations and exports

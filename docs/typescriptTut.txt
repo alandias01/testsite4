@@ -1,0 +1,8 @@
+Create tsconfig.json file.
+Allows you to run tsc and transpiles all your files
+
+VS Code
+Task->Run build task->tsc build
+
+shift+ctrl+b Builds code
+shift+alt+f formats all code
